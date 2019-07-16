@@ -1,0 +1,841 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{517FFAFB-1A13-4AC0-95FA-18998ABA4481}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LaboratoryTable</RootNamespace>
+    <AssemblyName>交通视频检测系统</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\title.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>LaboratoryTable.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Declarations, Version=2.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>VLC\x86\Declarations.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV">
+      <HintPath>..\dll\emgucv\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI">
+      <HintPath>..\dll\emgucv\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.Util">
+      <HintPath>..\dll\emgucv\Emgu.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="Implementation, Version=2.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>VLC\x86\Implementation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CSystemError.cs" />
+    <Compile Include="ExternalCall.cs" />
+    <Compile Include="DemarcateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemarcateForm.Designer.cs">
+      <DependentUpon>DemarcateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterForm.designer.cs">
+      <DependentUpon>ParameterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessBarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcessBarForm.Designer.cs">
+      <DependentUpon>ProcessBarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VideoDetectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VideoDetectForm.Designer.cs">
+      <DependentUpon>VideoDetectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VideoPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VideoPlayer.Designer.cs">
+      <DependentUpon>VideoPlayer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DemarcateForm.resx">
+      <DependentUpon>DemarcateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterForm.resx">
+      <DependentUpon>ParameterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessBarForm.resx">
+      <DependentUpon>ProcessBarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VideoDetectForm.resx">
+      <DependentUpon>VideoDetectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="VideoPlayer.resx">
+      <DependentUpon>VideoPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="VLC\x86\plugins\plugins-04041e-f8.dat" />
+    <None Include="VLC\x86\plugins\plugins-04041e-fe8.dat" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\title.ico" />
+    <Content Include="VLC\VirtualCoil.h" />
+    <Content Include="VLC\x64\Declarations.dll" />
+    <Content Include="VLC\x64\Implementation.dll" />
+    <Content Include="VLC\x64\libvlc.dll" />
+    <Content Include="VLC\x64\libvlccore.dll" />
+    <Content Include="VLC\x64\LibVlcWrapper.dll" />
+    <Content Include="VLC\x64\NLog.dll" />
+    <Content Include="VLC\x64\plugins\liba52tofloat32_plugin.dll" />
+    <Content Include="VLC\x64\plugins\liba52tospdif_plugin.dll" />
+    <Content Include="VLC\x64\plugins\liba52_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaccess_attachment_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaccess_bd_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaccess_ftp_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaccess_http_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaccess_imem_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaccess_mms_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaccess_output_dummy_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaccess_output_file_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaccess_output_http_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaccess_output_livehttp_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaccess_output_shout_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaccess_output_udp_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaccess_rar_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaccess_realrtsp_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaccess_smb_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaccess_tcp_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaccess_udp_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaccess_vdr_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libadjust_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libadpcm_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libadummy_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaes3_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libafile_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaiff_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libalphamask_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libamem_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libanaglyph_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libantiflicker_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaraw_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libasf_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libatmo_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaudiobargraph_a_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaudiobargraph_v_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaudioscrobbler_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libaudio_format_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libau_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libavcodec_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libavi_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libball_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libblendbench_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libblend_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libbluescreen_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libcaca_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libcanvas_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libcc_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libcdda_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libcdg_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libchain_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libchorus_flanger_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libclone_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libcolorthres_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libcompressor_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libcroppadd_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libcrystalhd_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libcvdsub_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdash_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libddummy_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdeinterlace_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdemuxdump_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdemux_cdg_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdemux_stl_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdirac_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdirect2d_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdirect3d_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdirectdraw_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdirectsound_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdmo_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdolby_surround_decoder_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdrawable_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdshow_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdtstofloat32_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdtstospdif_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdts_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdtv_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdummy_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdvbsub_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdvdnav_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdvdread_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libdxva2_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libedummy_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libequalizer_plugin.dll" />
+    <Content Include="VLC\x64\plugins\liberase_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libes_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libexport_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libextract_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libfaad_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libfilesystem_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libfingerprinter_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libflacsys_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libflac_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libfloat_mixer_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libfolder_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libfreetype_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libg711_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libgain_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libgaussianblur_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libgestures_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libglobalhotkeys_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libglwin32_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libgme_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libgoom_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libgradfun_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libgradient_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libgrain_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libgrey_yuv_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libh264_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libheadphone_channel_mixer_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libhotkeys_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libhqdn3d_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libhttplive_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libi420_rgb_mmx_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libi420_rgb_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libi420_rgb_sse2_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libi420_yuy2_mmx_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libi420_yuy2_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libi420_yuy2_sse2_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libi422_i420_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libi422_yuy2_mmx_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libi422_yuy2_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libi422_yuy2_sse2_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libidummy_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libimage_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libinteger_mixer_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libinvert_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libkaraoke_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libkate_plugin.dll" />
+    <Content Include="VLC\x64\plugins\liblibass_plugin.dll" />
+    <Content Include="VLC\x64\plugins\liblibbluray_plugin.dll" />
+    <Content Include="VLC\x64\plugins\liblibmpeg2_plugin.dll" />
+    <Content Include="VLC\x64\plugins\liblive555_plugin.dll" />
+    <Content Include="VLC\x64\plugins\liblogger_plugin.dll" />
+    <Content Include="VLC\x64\plugins\liblogo_plugin.dll" />
+    <Content Include="VLC\x64\plugins\liblpcm_plugin.dll" />
+    <Content Include="VLC\x64\plugins\liblua_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmagnify_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmarq_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmediadirs_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmirror_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmjpeg_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmkv_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmmdevice_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmod_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmono_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmosaic_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmotionblur_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmotiondetect_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmp4_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmpc_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmpeg_audio_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmpgatofixed32_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmpgv_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmux_asf_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmux_avi_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmux_dummy_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmux_mp4_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmux_mpjpeg_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmux_ogg_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmux_ps_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmux_ts_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libmux_wav_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libnetsync_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libnormvol_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libnsc_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libnsv_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libntservice_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libnuv_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libogg_plugin.dll" />
+    <Content Include="VLC\x64\plugins\liboldrc_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libopus_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libpacketizer_copy_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libpacketizer_dirac_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libpacketizer_flac_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libpacketizer_h264_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libpacketizer_mlp_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libpacketizer_mpeg4audio_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libpacketizer_mpeg4video_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libpacketizer_mpegvideo_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libpacketizer_vc1_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libpanoramix_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libparam_eq_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libplaylist_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libpng_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libpodcast_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libposterize_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libpostproc_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libprojectm_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libpsychedelic_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libps_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libpuzzle_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libpva_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libqt4_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libquicktime_plugin.dll" />
+    <Content Include="VLC\x64\plugins\librawaud_plugin.dll" />
+    <Content Include="VLC\x64\plugins\librawdv_plugin.dll" />
+    <Content Include="VLC\x64\plugins\librawvideo_plugin.dll" />
+    <Content Include="VLC\x64\plugins\librawvid_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libreal_plugin.dll" />
+    <Content Include="VLC\x64\plugins\librecord_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libremap_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libremoteosd_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libripple_plugin.dll" />
+    <Content Include="VLC\x64\plugins\librotate_plugin.dll" />
+    <Content Include="VLC\x64\plugins\librss_plugin.dll" />
+    <Content Include="VLC\x64\plugins\librtp_plugin.dll" />
+    <Content Include="VLC\x64\plugins\librv32_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libsamplerate_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libsap_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libscaletempo_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libscale_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libscene_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libschroedinger_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libscreen_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libscte27_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libsdp_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libsepia_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libsharpen_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libshm_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libsid_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libsimple_channel_mixer_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libskins2_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libsmf_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libsmooth_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libspatializer_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libspeex_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libspeex_resampler_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libspudec_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstats_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstereo_widen_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstl_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstream_filter_rar_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstream_out_autodel_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstream_out_bridge_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstream_out_chromaprint_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstream_out_delay_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstream_out_description_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstream_out_display_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstream_out_dummy_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstream_out_duplicate_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstream_out_es_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstream_out_gather_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstream_out_langfromtelx_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstream_out_mosaic_bridge_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstream_out_raop_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstream_out_record_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstream_out_rtp_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstream_out_setid_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstream_out_smem_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstream_out_standard_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libstream_out_transcode_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libsubsdec_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libsubsdelay_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libsubsusf_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libsubtitle_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libsvcdsub_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libswscale_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libt140_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libtaglib_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libtdummy_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libtheora_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libtimecode_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libtransform_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libtrivial_channel_mixer_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libts_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libtta_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libtwolame_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libty_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libugly_resampler_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libuleaddvaudio_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libupnp_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libvc1_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libvcd_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libvdummy_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libvisual_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libvmem_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libvobsub_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libvoc_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libvod_rtsp_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libvorbis_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libwall_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libwaveout_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libwave_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libwav_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libwindrive_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libwingdi_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libx264_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libxa_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libxml_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libyuvp_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libyuv_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libyuy2_i420_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libyuy2_i422_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libzip_plugin.dll" />
+    <Content Include="VLC\x64\plugins\libzvbi_plugin.dll" />
+    <Content Include="VLC\x86\Declarations.dll" />
+    <Content Include="VLC\x86\Implementation.dll" />
+    <Content Include="VLC\x86\libvlc.dll" />
+    <Content Include="VLC\x86\libvlccore.dll" />
+    <Content Include="VLC\x86\LibVlcWrapper.dll" />
+    <Content Include="VLC\x86\NLog.dll" />
+    <Content Include="VLC\x86\plugins\liba52tofloat32_plugin.dll" />
+    <Content Include="VLC\x86\plugins\liba52tospdif_plugin.dll" />
+    <Content Include="VLC\x86\plugins\liba52_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaccess_attachment_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaccess_bd_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaccess_fake_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaccess_ftp_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaccess_http_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaccess_imem_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaccess_mms_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaccess_output_dummy_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaccess_output_file_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaccess_output_http_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaccess_output_shout_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaccess_output_udp_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaccess_realrtsp_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaccess_smb_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaccess_tcp_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaccess_udp_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libadjust_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libadpcm_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaes3_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaiff_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libalphamask_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaout_directx_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaout_file_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaout_sdl_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaraw_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libasf_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libatmo_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaudiobargraph_a_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaudiobargraph_v_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaudioscrobbler_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libaudio_format_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libau_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libavcodec_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libavi_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libball_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libbda_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libblendbench_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libblend_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libbluescreen_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libcaca_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libcanvas_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libcc_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libcdda_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libcdg_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libchain_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libchorus_flanger_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libclone_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libcolorthres_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libconverter_fixed_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libcroppadd_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libcrop_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libcvdsub_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libdeinterlace_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libdemuxdump_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libdemux_cdg_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libdirac_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libdirect3d_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libdirectx_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libdmo_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libdolby_surround_decoder_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libdrawable_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libdshow_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libdtstofloat32_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libdtstospdif_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libdts_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libdummy_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libdvbsub_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libdvdnav_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libdvdread_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libequalizer_plugin.dll" />
+    <Content Include="VLC\x86\plugins\liberase_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libes_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libexport_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libextract_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libfaad_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libfake_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libfilesystem_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libflacsys_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libflac_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libfloat32_mixer_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libfluidsynth_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libfolder_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libfreetype_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libgaussianblur_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libgestures_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libglobalhotkeys_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libglwin32_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libgme_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libgnutls_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libgoom_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libgradient_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libgrain_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libgrey_yuv_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libh264_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libheadphone_channel_mixer_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libhotkeys_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libi420_rgb_mmx_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libi420_rgb_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libi420_rgb_sse2_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libi420_yuy2_mmx_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libi420_yuy2_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libi420_yuy2_sse2_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libi422_i420_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libi422_yuy2_mmx_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libi422_yuy2_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libi422_yuy2_sse2_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libinvert_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libinvmem_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libkate_plugin.dll" />
+    <Content Include="VLC\x86\plugins\liblibass_plugin.dll" />
+    <Content Include="VLC\x86\plugins\liblibmpeg2_plugin.dll" />
+    <Content Include="VLC\x86\plugins\liblive555_plugin.dll" />
+    <Content Include="VLC\x86\plugins\liblogger_plugin.dll" />
+    <Content Include="VLC\x86\plugins\liblogo_plugin.dll" />
+    <Content Include="VLC\x86\plugins\liblpcm_plugin.dll" />
+    <Content Include="VLC\x86\plugins\liblua_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmagnify_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmarq_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmediadirs_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmemcpy3dn_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmemcpymmxext_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmemcpymmx_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmirror_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmjpeg_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmkv_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmod_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmono_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmosaic_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmotionblur_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmotiondetect_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmp4_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmpc_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmpeg_audio_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmpgatofixed32_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmpgv_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmsn_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmux_asf_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmux_avi_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmux_dummy_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmux_mp4_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmux_mpjpeg_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmux_ogg_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmux_ps_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmux_ts_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libmux_wav_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libnetsync_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libnoise_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libnormvol_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libnsc_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libnsv_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libntservice_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libnuv_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libogg_plugin.dll" />
+    <Content Include="VLC\x86\plugins\liboldhttp_plugin.dll" />
+    <Content Include="VLC\x86\plugins\liboldrc_plugin.dll" />
+    <Content Include="VLC\x86\plugins\liboldtelnet_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libosdmenu_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libosd_parser_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libpacketizer_copy_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libpacketizer_dirac_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libpacketizer_flac_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libpacketizer_h264_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libpacketizer_mlp_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libpacketizer_mpeg4audio_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libpacketizer_mpeg4video_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libpacketizer_mpegvideo_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libpacketizer_vc1_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libpanoramix_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libparam_eq_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libplaylist_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libpng_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libpodcast_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libportaudio_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libpostproc_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libprojectm_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libpsychedelic_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libps_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libpuzzle_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libpva_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libqt4_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libquicktime_plugin.dll" />
+    <Content Include="VLC\x86\plugins\librawaud_plugin.dll" />
+    <Content Include="VLC\x86\plugins\librawdv_plugin.dll" />
+    <Content Include="VLC\x86\plugins\librawvideo_plugin.dll" />
+    <Content Include="VLC\x86\plugins\librawvid_plugin.dll" />
+    <Content Include="VLC\x86\plugins\librealvideo_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libreal_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libremoteosd_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libripple_plugin.dll" />
+    <Content Include="VLC\x86\plugins\librotate_plugin.dll" />
+    <Content Include="VLC\x86\plugins\librss_plugin.dll" />
+    <Content Include="VLC\x86\plugins\librtp_plugin.dll" />
+    <Content Include="VLC\x86\plugins\librv32_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libsap_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libscaletempo_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libscale_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libscene_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libschroedinger_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libscreen_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libsdl_image_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libsharpen_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libsimple_channel_mixer_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libskins2_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libsmf_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libspatializer_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libspdif_mixer_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libspeex_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libspudec_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libstats_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libstream_filter_rar_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libstream_filter_record_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libstream_out_autodel_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libstream_out_bridge_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libstream_out_description_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libstream_out_display_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libstream_out_dummy_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libstream_out_duplicate_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libstream_out_es_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libstream_out_gather_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libstream_out_mosaic_bridge_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libstream_out_raop_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libstream_out_record_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libstream_out_rtp_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libstream_out_smem_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libstream_out_standard_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libstream_out_transcode_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libsubsdec_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libsubsusf_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libsubtitle_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libsvcdsub_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libswscale_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libt140_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libtaglib_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libtheora_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libtransform_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libtrivial_channel_mixer_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libtrivial_mixer_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libts_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libtta_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libtwolame_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libty_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libugly_resampler_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libvc1_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libvcd_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libvideo_filter_wrapper_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libvisual_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libvmem_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libvobsub_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libvoc_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libvod_rtsp_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libvorbis_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libvout_sdl_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libvout_wrapper_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libwall_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libwaveout_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libwave_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libwav_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libwingdi_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libx264_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libxa_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libxml_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libxtag_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libyuvp_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libyuv_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libyuy2_i420_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libyuy2_i422_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libzip_plugin.dll" />
+    <Content Include="VLC\x86\plugins\libzvbi_plugin.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel1">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)VLC\x86\*" "$(TargetDir)"/e/y/s
+xcopy "$(SolutionDir)dll\opencv\x86\release\*" "$(TargetDir)"/e/y/s
+xcopy "$(SolutionDir)Release\*.dll" "$(TargetDir)"/e/y/s</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

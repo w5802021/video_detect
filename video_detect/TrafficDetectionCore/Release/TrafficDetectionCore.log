@@ -1,0 +1,61 @@
+﻿生成启动时间为 2019/7/16 11:01:05。
+     1>项目“G:\vechiledetect2\TrafficDetectionCore\TrafficDetectionCore.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“Release\TrafficDetectionCore.lastbuildstate”。
+       InitializeBuildStatus:
+         正在创建“Release\TrafficDetectionCore.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D VEHICLEDETECT2_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt DemarcateTransform.cpp DetectionMain.cpp DetectionParameter.cpp MOG_BGS.cpp VehicleFlowDetection.cpp Vibe.cpp VirtualCoil.cpp
+         DemarcateTransform.cpp
+     1>g:\vechiledetect2\trafficdetectioncore\ViBe.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>g:\vechiledetect2\trafficdetectioncore\VirtualCoil.h(100): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+         DetectionMain.cpp
+     1>g:\vechiledetect2\trafficdetectioncore\Vibe.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>g:\vechiledetect2\trafficdetectioncore\VirtualCoil.h(100): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>DetectionMain.cpp(415): warning C4018: “<”: 有符号/无符号不匹配
+     1>DetectionMain.cpp(468): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>DetectionMain.cpp(697): warning C4018: “<”: 有符号/无符号不匹配
+     1>DetectionMain.cpp(701): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>DetectionMain.cpp(744): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>DetectionMain.cpp(745): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>DetectionMain.cpp(752): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+         DetectionParameter.cpp
+         MOG_BGS.cpp
+     1>MOG_BGS.cpp(72): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
+     1>MOG_BGS.cpp(75): warning C4244: “+=”: 从“double”转换到“uchar”，可能丢失数据
+     1>MOG_BGS.cpp(78): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
+     1>MOG_BGS.cpp(83): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
+     1>MOG_BGS.cpp(127): warning C4305: “=”: 从“double”到“float”截断
+     1>MOG_BGS.cpp(136): warning C4305: “*=”: 从“double”到“float”截断
+         VehicleFlowDetection.cpp
+     1>g:\vechiledetect2\trafficdetectioncore\Vibe.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>g:\vechiledetect2\trafficdetectioncore\VirtualCoil.h(100): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+         Vibe.cpp
+     1>Vibe.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>g:\vechiledetect2\trafficdetectioncore\ViBe.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         VirtualCoil.cpp
+     1>g:\vechiledetect2\trafficdetectioncore\Vibe.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>g:\vechiledetect2\trafficdetectioncore\VirtualCoil.h(100): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>VirtualCoil.cpp(303): warning C4101: “e”: 未引用的局部变量
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\vechiledetect2\Release\TrafficDetectionCore.dll" /INCREMENTAL:NO /NOLOGO opencv_core2410.lib opencv_imgproc2410.lib opencv_highgui2410.lib opencv_ml2410.lib opencv_video2410.lib opencv_features2d2410.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\TrafficDetectionCore.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"G:\vechiledetect2\Release\TrafficDetectionCore.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\vechiledetect2\Release\TrafficDetectionCore.lib" /MACHINE:X86 /DLL Release\DemarcateTransform.obj
+         Release\DetectionMain.obj
+         Release\DetectionParameter.obj
+         Release\MOG_BGS.obj
+         Release\VehicleFlowDetection.obj
+         Release\Vibe.obj
+         Release\VirtualCoil.obj
+            正在创建库 G:\vechiledetect2\Release\TrafficDetectionCore.lib 和对象 G:\vechiledetect2\Release\TrafficDetectionCore.exp
+         正在生成代码
+         已完成代码的生成
+         TrafficDetectionCore.vcxproj -> G:\vechiledetect2\Release\TrafficDetectionCore.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"G:\vechiledetect2\Release\TrafficDetectionCore.dll;#2" /manifest Release\TrafficDetectionCore.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         正在删除文件“Release\TrafficDetectionCore.unsuccessfulbuild”。
+         正在对“Release\TrafficDetectionCore.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“G:\vechiledetect2\TrafficDetectionCore\TrafficDetectionCore.vcxproj”(rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:07.84
